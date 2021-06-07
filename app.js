@@ -26,12 +26,9 @@ app.post("/",(req,res)=>{
             }
         ]
     };
-    const jsonData =  JSON.stringify(data);
-    const url = "https://us6.api.mailchimp.com/3.0/lists/8245951e0d";
-    const options = {
-        method : "POST",
-        auth : "ketan:e074716e42368a77f20cac105e1575f9-us6"
-    }
+    //removed here 5-6 lines private //
+ 
+    //till here
     const request = https.request(url,options,(response)=>{
         if(response.statusCode===200) {
             res.sendFile(__dirname+"/success.html");
@@ -58,10 +55,3 @@ app.listen(process.env.PORT || 2500 ,()=>{
     console.log("server starerd");  
 });
   
-
-
-//api -key
-// e074716e42368a77f20cac105e1575f9-us6
-
-//list id
-// 8245951e0d
